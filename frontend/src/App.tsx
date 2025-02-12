@@ -1,15 +1,15 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home/HomePage";
+import AuthCallbackPage from "./pages/auth-callback/AuthCallbackPage";
 function App() {
 
   return (
     <>
-      <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      <h1 className="text-red-400">Hare Krishna!</h1>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/auth-callback" element={<AuthCallbackPage />}/>
+      </Routes>
     </>
   )
 }
