@@ -12,9 +12,9 @@ const Topbar = () => {
       backdrop-blur-md z-10
     '
 		>
-			<div className='flex gap-2 items-center'>
-				<img src='/melune.png' className='size-8' alt='Melune logo' />
-				Melune
+			<div className='flex gap-1 items-center'>
+				<img src='/melune.png' className='size-12' alt='Melune logo' />
+				<p className="font-sans font-bold">Melune</p>
 			</div>
 			<div className='flex items-center gap-4'>
 				{(
