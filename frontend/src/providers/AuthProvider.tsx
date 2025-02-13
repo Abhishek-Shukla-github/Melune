@@ -17,11 +17,6 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 			try {
 				const token = await getToken();
 				updateApiToken(token);
-				if (token) {
-					await checkAdminStatus();
-					// init socket
-					if (userId) initSocket(userId);
-				}
 			} catch (error: any) {
 				updateApiToken(null);
 				console.log("Error in auth provider", error);

@@ -1,9 +1,10 @@
-import React from 'react'
+import Topbar from "@/components/TopBar";
 
 const HomePage = () => {
-  return (
-    <div>HomePage</div>
-  )
-}
-
-export default HomePage
+	return (
+		<main className='rounded-md overflow-hidden h-full bg-gradient-to-b from-zinc-800 to-zinc-900'>
+			<Topbar />
+		</main>
+	);
+};
+export default HomePage;
