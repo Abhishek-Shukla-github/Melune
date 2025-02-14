@@ -4,7 +4,6 @@ import { protectRoute, requireAdmin } from "../middleware/auth.middleware.js";
 
 const router = Router();
 
-//Authenticate upfront if the user is admin
 router.use(protectRoute, requireAdmin);
 
 router.get("/check", checkAdmin);
