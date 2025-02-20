@@ -5,6 +5,7 @@ import { useChatStore } from "@/store/useChatStore";
 
 const UsersList = () => {
 	const { users, selectedUser, isLoading, setSelectedUser, onlineUsers } = useChatStore();
+	const AI_USER = { _id: import.meta.env.VITE_AI_ID, fullName: "Melune AI", isAI: true, clerkId: import.meta.env.VITE_AI_ID };
 
 	return (
 		<div className='border-r border-zinc-800'>
@@ -40,6 +41,25 @@ const UsersList = () => {
 								</div>
 							))
 						)}
+					</div>
+					<div
+						key={AI_USER._id}
+						onClick={() => setSelectedUser(AI_USER)}
+						className={`flex items-center justify-center lg:justify-start gap-3 p-3 
+							rounded-lg cursor-pointer transition-colors
+							${selectedUser?._id === AI_USER._id ? "bg-zinc-800" : "hover:bg-zinc-800/50"}`}
+					>
+						<div className='relative'>
+							<Avatar className='size-8 md:size-12'>
+								<AvatarFallback>M</AvatarFallback>
+							</Avatar>
+							{/* Online Indicator */}
+							<div className='absolute bottom-0 right-0 h-3 w-3 rounded-full ring-2 ring-zinc-900 bg-green-500' />
+						</div>
+
+						<div className='flex-1 min-w-0 lg:block hidden'>
+							<span className='font-medium truncate'>Melune AI</span>
+						</div>
 					</div>
 				</ScrollArea>
 			</div>
