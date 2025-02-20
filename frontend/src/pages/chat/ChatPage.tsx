@@ -92,6 +92,8 @@ const ChatPage = () => {
     }
   },[messages])
 
+  const uniqueMessages = Array.from(new Map(messages.map(msg => [msg._id, msg])).values());
+
 
   return (
     <main className="h-full rounded-lg bg-gradient-to-b from-zinc-800 to-zinc-900 overflow-hidden">
@@ -104,7 +106,7 @@ const ChatPage = () => {
               <ChatHeader />
               <ScrollArea className="h-[calc(100vh-340px)]">
                 <div className="p-4 space-y-4">
-                  {messages.map((message) => (
+                  {uniqueMessages.map((message) => (
                     <ChatMessage key={message._id} message={message} user={user} selectedUser={selectedUser} />
                   ))}
                   <div ref={lastMessageRef} />
