@@ -5,11 +5,20 @@ Melune is a Spotify-inspired music streaming platform with real-time chat, socia
 ## Features
 
 - 🎵 **Music Streaming** – Stream high-quality audio seamlessly.
+  ![image](https://github.com/user-attachments/assets/011f93f0-5791-42e2-b1fa-33185cf30fa5)
+
 - 💬 **Real-Time Chat** – Chat with friends while listening to music.
+  ![image](https://github.com/user-attachments/assets/cd2c3389-b056-4868-a481-faa52428875d)
 - 🎧 **Social Listening** – Sync playback with friends for a shared experience.
+  ![image](https://github.com/user-attachments/assets/1dee0018-ed1a-40b3-b77c-8de0df3fa24a)
+
 - 🎛️ **Admin Dashboard** – Manage songs, albums, and artists efficiently.
+  ![image](https://github.com/user-attachments/assets/e914bc6a-1311-482b-951e-4aa4683c4aa0)
+
 - 🚀 **Modern UI** – Sleek and responsive design using modern frontend frameworks.
 - 🧠 **AI-Powered Interactions** – Chat with an AI assistant to get music recommendations, insights about your favorite artists, or create personalized playlists.
+   ![image](https://github.com/user-attachments/assets/7288ed83-7a44-43ae-8972-3127e24ad6c3)
+
 
 ## Tech Stack
 
