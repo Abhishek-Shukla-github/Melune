@@ -3,7 +3,7 @@ import { LayoutDashboardIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SignInOAuthButtons from "./SignInOAuthButtons";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { useAuthStore } from "@/store/useAuthStore";
 
 const Topbar = () => {
@@ -26,17 +26,22 @@ const Topbar = () => {
 					</Link>
 				)}
 
-				<SignedOut>
+				{/* <SignedOut>
 					<SignInOAuthButtons />
-				</SignedOut>
+				</SignedOut> */}
 				<SignedOut>
-				<SignInButton />
+					<SignInButton >
+						<Button variant={"secondary"} className='w-full text-white border-zinc-200 h-11'>
+							<img src='/google.png' alt='Google' className='size-5' />
+							Continue with Google
+						</Button>
+					</SignInButton>
 				</SignedOut>
 				<SignedIn>
 					<UserButton />
 				</SignedIn>
 
-				<UserButton />
+				{/* <UserButton /> */}
 			</div>
 		</div>
 	);

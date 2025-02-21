@@ -20,7 +20,7 @@ const MessageInput = () => {
 	const [aiLoading,setAiLoading] = useState(false);
 	
   
-	const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+	const model = genAI.getGenerativeModel({ model: "tunedModels/melune-fine-tuned-prompts-k65ck3x8xp2r" });
 
 	const generateResp = async () => {
 		try {

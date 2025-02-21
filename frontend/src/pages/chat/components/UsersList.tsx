@@ -42,23 +42,26 @@ const UsersList = () => {
 							))
 						)}
 					</div>
-					<div
-						key={AI_USER._id}
-						onClick={() => setSelectedUser(AI_USER)}
-						className={`flex items-center justify-center lg:justify-start gap-3 p-3 
-							rounded-lg cursor-pointer transition-colors
-							${selectedUser?._id === AI_USER._id ? "bg-zinc-800" : "hover:bg-zinc-800/50"}`}
-					>
-						<div className='relative'>
-							<Avatar className='size-8 md:size-12'>
-								<AvatarFallback>M</AvatarFallback>
-							</Avatar>
-							{/* Online Indicator */}
-							<div className='absolute bottom-0 right-0 h-3 w-3 rounded-full ring-2 ring-zinc-900 bg-green-500' />
-						</div>
+					<div className="space-y-2 p-4">
+						<div
+							key={AI_USER._id}
+							onClick={() => setSelectedUser(AI_USER)}
+							className={`flex items-center justify-center lg:justify-start gap-3 p-3 
+								rounded-lg cursor-pointer transition-colors
+								${selectedUser?._id === AI_USER._id ? "bg-zinc-800" : "hover:bg-zinc-800/50"}`}
+						>
+							<div className='relative'>
+								<Avatar className='size-8 md:size-14'>
+									<AvatarImage src={"/melune.png"} />
+									<AvatarFallback>M</AvatarFallback>
+								</Avatar>
+								{/* Online Indicator */}
+								<div className='absolute bottom-0 right-0 h-3 w-3 rounded-full ring-2 ring-zinc-900 bg-green-500' />
+							</div>
 
-						<div className='flex-1 min-w-0 lg:block hidden'>
-							<span className='font-medium truncate'>Melune AI</span>
+							<div className='flex-1 min-w-0 lg:block hidden'>
+								<span className='font-medium truncate'>Melune AI</span>
+							</div>
 						</div>
 					</div>
 				</ScrollArea>

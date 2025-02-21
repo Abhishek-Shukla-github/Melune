@@ -10,12 +10,12 @@ function App() {
 
   return (
     <>
-      <SignedOut>
+        {/* <SignedOut>
           <SignInButton />
         </SignedOut>
         <SignedIn>
           <UserButton />
-        </SignedIn>
+        </SignedIn> */}
       <Routes>
         <Route path="/auth-callback" element={<AuthCallbackPage />}/>
         <Route path='/admin' element={<AdminPage />} />
